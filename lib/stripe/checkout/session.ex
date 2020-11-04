@@ -14,9 +14,10 @@ defmodule Stripe.Session do
   import Stripe.Request
 
   @type line_item :: %{
-          :amount => integer(),
-          :currency => String.t(),
-          :name => String.t(),
+          optional(:amount) => integer(),
+          optional(:price) => String.t(),
+          optional(:currency) => String.t(),
+          optional(:name) => String.t(),
           :quantity => integer(),
           optional(:description) => String.t(),
           optional(:images) => list(String.t())
