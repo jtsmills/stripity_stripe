@@ -61,13 +61,14 @@ defmodule Stripe.Session do
           :cancel_url => String.t(),
           :payment_method_types => list(String.t()),
           :success_url => String.t(),
-          optional(:mode) => String.t(),
+          optional(:allow_promotion_codes) => boolean(),
           optional(:client_reference_id) => String.t(),
           optional(:customer) => String.t(),
           optional(:customer_email) => String.t(),
           optional(:line_items) => list(line_item),
           optional(:locale) => String.t(),
           optional(:metadata) => Stripe.Types.metadata(),
+          optional(:mode) => String.t(),
           optional(:payment_intent_data) => payment_intent_data,
           optional(:subscription_data) => subscription_data
         }
